@@ -27,7 +27,7 @@ services:
       - redis
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - REDIS_CONNECTION=redis:6379,password=Abc@2024,abortConnect=false
+      - REDIS_CONNECTION=redis:6379,password=Abc.2024,abortConnect=false
     restart: always
     networks:
       - app_network

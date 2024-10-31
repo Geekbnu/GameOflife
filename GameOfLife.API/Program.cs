@@ -12,11 +12,10 @@ namespace GameOfLifeAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            string connectionString = "redis:6379,password=Abc.2024,abortConnect=false";
+            string connectionString = Environment.GetEnvironmentVariable("REDIS_CONNECTION"); ;
 
             var redis = ConnectionMultiplexer.Connect(connectionString);
 
-            //TODO: Rever os tipos Singleton aqui
             builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
             builder.Services.AddScoped<IGameOfLifeEngine, GameOfLifeEngine>();
             builder.Services.AddScoped<IPersistence,RedisCache>();

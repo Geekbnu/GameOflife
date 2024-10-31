@@ -4,7 +4,8 @@
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "REDIS_CONNECTION": "localhost:6379,password=Abc@2024,abortConnect=false"
       },
       "applicationUrl": "https://localhost:62145;http://localhost:62146"
     },
@@ -12,7 +13,8 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+
       }
     },
     "iisSettings": {
